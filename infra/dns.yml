@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  wyndstonedr.org Route 53 hosted zone. Website alias records live in site.yml.
+
+Parameters:
+  DomainName:
+    Type: String
+    Default: wyndstonedr.org
+
+Resources:
+  HostedZone:
+    Type: AWS::Route53::HostedZone
+    Properties:
+      Name: !Ref DomainName
+
+  # Intentionally not carried over from GoDaddy:
+  #   @ A 76.223.105.230 / 13.248.243.5  - GoDaddy Website Builder "Coming Soon" page; replaced by CloudFront
+  #   www CNAME @                        - replaced by CloudFront alias in site.yml
+  # The domain has no email (no MX, SPF, or DMARC records).
+
+Outputs:
+  HostedZoneId:
+    Value: !Ref HostedZone
+    Export:
+      Name: wyndstonedr-HostedZoneId
+  NameServers:
+    Description: Set these as custom nameservers at GoDaddy.
+    Value: !Join [", ", !GetAtt HostedZone.NameServers]

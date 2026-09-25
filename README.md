@@ -1,7 +1,7 @@
 # wyndstonedr.org
 
-Placeholder site for [wyndstonedr.org](https://wyndstonedr.org), the online home for neighbors on
-Wyndstone Drive in Sylvania, Ohio.
+Placeholder site for [wyndstonedr.org](https://wyndstonedr.org), the homeowners association website
+for the Wyndstone subdivision in Sylvania, Ohio.
 
 ## Layout
 

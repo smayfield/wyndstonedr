@@ -16,6 +16,7 @@ Resources:
   # Intentionally not carried over from GoDaddy:
   #   @ A 76.223.105.230 / 13.248.243.5  - GoDaddy Website Builder "Coming Soon" page; replaced by CloudFront
   #   www CNAME @                        - replaced by CloudFront alias in site.yml
+  #   _domainconnect CNAME               - GoDaddy-DNS-only feature, meaningless off GoDaddy nameservers
   # The domain has no email (no MX, SPF, or DMARC records).
 
 Outputs:
